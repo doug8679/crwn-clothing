@@ -27,7 +27,8 @@ const config = {
         await userRef.set({
           displayName,
           email,
-          createdAt
+          createdAt,
+          ...additionalData
         });
       } catch (error) {
         console.log('error creating user', error.message);
